@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>mdhtml</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" href="index.css" type="text/css" />
+    <link rel="stylesheet" href="github-markdown.css" type="text/css" />
+  </head>
+  <body>
+    <div id="hello" style="display: none">
+      <h1>mdhtml 📜</h1>
+      <span>Pretty way to display your markdown files</span>
+      <div class="urlbox">
+        <input id="present-link" placeholder="Mardown content URL" />
+        <div id="file-uploader" class="fileUpload present-button">
+          <span>or upload a file</span>
+          <input type="file" class="upload" />
+        </div>
+        <button id="present-button" class="present-button" style="display:none">Render</button>
+      </div>
+      <span><a href="/?url=/sample.md">Chekcout sample document</a></span>
+    </div>
+    <div id="present" sytle="display: none">
+      <div id="content" class="markdown-body"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.4/markdown-it.js"></script>
+    <script src="https://unpkg.com/tinykeys@1.1.1/dist/tinykeys.umd.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@highlightjs/cdn-assets@10.7.1/styles/default.min.css"
+    />
+    <script src="https://unpkg.com/@highlightjs/cdn-assets@10.7.1/highlight.min.js"></script>
+    <script src="index.js"></script>
+  </body>
+</html>
