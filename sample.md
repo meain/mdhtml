@@ -1,23 +1,140 @@
-Let us say you went deep in to a highly nested project structure and want to get back to the project root.
+## Typography Elements in One
 
-Sure you could go `cd ../<TAB>`, nah not here `cd ../../<TAB>`, not here either .....
-But there is a much better way to do this.
+Let's start with a informative paragraph. **This text is bolded.** But not this one! _How about italic text?_ Cool right? Ok, let's **_combine_** them together. Yeah, that's right! I have code to highlight, so `ThisIsMyCode()`. What a nice! Good people will hyperlink away, so [here we go](#) or [http://www.example.com](http://www.example.com).
 
-You can leverage `git` to find where the project root is.
+<div class="divider"></div>
 
-```shell
-git rev-parse --show-toplevel 2> /dev/null
+## Headings H1 to H6
+
+# H1 Heading
+
+## H2 Heading
+
+### H3 Heading
+
+#### H4 Heading
+
+##### H5 Heading
+
+###### H6 Heading
+
+<div class="divider"></div>
+
+## Footnote
+
+Let's say you have text that you want to refer with a footnote, you can do that too! This is an example for the footnote number one [[^1]]. You can even add more footnotes, with link! [[^2]]
+
+<div class="divider"></div>
+
+## Blockquote
+
+> Start by doing what's necessary; then do what's possible; and suddenly you are doing the impossible. --Francis of Assisi
+
+**NOTE:** This theme does NOT support nested blockquotes.
+
+<div class="divider"></div>
+
+## List Items
+
+1. First order list item
+2. Second item
+
+* Unordered list can use asterisks
+- Or minuses
++ Or pluses
+
+<div class="divider"></div>
+
+## Code Blocks
+
+```python
+# Function for nth Fibonacci number
+def fibonacci(n):
+   
+    # Check if input is 0 then it will
+    # print incorrect input
+    if n < 0:
+        print("Incorrect input")
+ 
+    # Check if n is 0
+    # then it will return 0
+    elif n == 0:
+        return 0
+ 
+    # Check if n is 1,2
+    # it will return 1
+    elif n == 1 or n == 2:
+        return 1
+ 
+    else:
+        return fibonacci(n-1) + fibonacci(n-2)
+ 
+# Driver Program
+print(fibonacci(9))
 ```
 
-This gives you the project root location.
-Now you can make this into a fuction and source it.
-
-```shell
-root(){
-    cd $(git rev-parse --show-toplevel 2> /dev/null)
-}
+```javascript
+s = "Javascript syntax highlighting"
+console.log(s)
 ```
 
-Now you can type `root` and go to your project root.
+```
+No language indicated, so no syntax highlighting.
+But let's throw in a <b>tag</b>.
+```
 
-*Sweet right?*
+<div class="divider"></div>
+
+## Table
+
+### Table 1: With Alignment
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
+
+### Table 2: With Typography Elements
+
+Markdown | Less | Pretty
+--- | --- | ---
+*Still* | `renders` | **nicely**
+1 | 2 | 3
+
+<div class="divider"></div>
+
+## Horizontal Line
+
+The HTML `<hr>` element is for creating a "thematic break" between paragraph-level elements. In markdown, you can create a `<hr>` with any of the following:
+
+* `___`: three consecutive underscores
+* `---`: three consecutive dashes
+* `***`: three consecutive asterisks
+
+renders to:
+
+___
+
+---
+
+***
+
+<div class="divider"></div>
+
+## Media
+
+### YouTube Embedded Iframe
+
+<div class="video-container"><iframe src="https://www.youtube.com/embed/n1a7o44WxNo" frameborder="0" allowfullscreen></iframe></div>
+
+### Image
+
+![Minion](http://octodex.github.com/images/minion.png)
+
+---
+Footnote:
+
+[^1]: 1: Footnote number one yeah baby!
+
+[^2]: 2: A footnote you can link to - [click here!](#)
