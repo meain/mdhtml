@@ -24,7 +24,7 @@ function renderMarkdown(doc) {
 const hello = document.getElementById('hello')
 const present = document.getElementById('present')
 function showHello() {
-  hello.style.display = 'block'
+  hello.style.display = 'flex'
   present.style.display = 'none'
 }
 function showPresentation() {
