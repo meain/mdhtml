@@ -18,12 +18,26 @@
           <span>or upload a file</span>
           <input type="file" class="upload" />
         </div>
-        <button id="present-button" class="present-button" style="display:none">Render</button>
+        <button
+          id="present-button"
+          class="present-button"
+          style="display: none"
+        >
+          Render
+        </button>
       </div>
       <span><a href="/?url=/sample.md">Chekcout sample document</a></span>
     </div>
-    <div id="present" sytle="display: none">
+    <div id="present" style="display: none">
       <div id="content" class="markdown-body"></div>
+      <br />
+      <br />
+      <hr />
+      <div style="text-align: center">
+        <a href="#" id="raw">View Raw</a>
+        ::
+        <a href="/" id="home">Home</a>
+      </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/markdown-it/12.0.4/markdown-it.js"></script>
     <script src="https://unpkg.com/tinykeys@1.1.1/dist/tinykeys.umd.js"></script>

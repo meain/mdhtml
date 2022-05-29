@@ -14,7 +14,6 @@ const keys = window.tinykeys
 
 const urlParams = new URLSearchParams(window.location.search)
 const contentUrl = urlParams.get('url')
-// console.log("url:", urlParams.get("url"));
 
 function renderMarkdown(doc) {
   const result = md.render(doc)
@@ -41,11 +40,13 @@ function startPresentation(content) {
 if (contentUrl !== null) {
   if (contentUrl == '_file') {
     startPresentation(localStorage.getItem('content'))
+    document.getElementById("raw").setAttribute("href", "#")
   } else {
     fetch(contentUrl)
       .then((data) => data.text())
       .then((content) => {
-        console.log(content)
+        // update link for raw text
+        document.getElementById("raw").setAttribute("href", contentUrl)
         startPresentation(content)
       })
       .catch(() => {
